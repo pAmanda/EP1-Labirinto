@@ -1,17 +1,18 @@
 #ifndef MAP_HPP
 #define MAP_HPP
 
-#define LINHA 22
-#define COLUNA 50
+#define LINE 22
+#define COLUMN 50
 
 class Map{
       private:
-        char maze[LINHA][COLUNA];
+        char maze[LINE][COLUMN];
 
       public:
         Map();
-        void setMaze(char a, int linha, int coluna);
-        char getMaze(int linha, int coluna);
+        ~Map();
+        void setMaze(char a, int lin, int col);
+        char getMaze(int lin, int col);
         void chargeMaze();
         void makeMaze();
 };
