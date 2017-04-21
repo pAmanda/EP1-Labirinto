@@ -4,6 +4,7 @@
 class Drawn{
     public:
       Drawn();
+      ~Drawn();
       void drawnMap();
 };
 

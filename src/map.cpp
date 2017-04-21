@@ -2,8 +2,8 @@
 #include<ncurses.h>
 #include<fstream>
 #include "map.hpp"
-#define LINHA 22
-#define COLUNA 50
+#define LINE 22
+#define COLUMN 50
 using namespace std;
 
 Map::Map(){
@@ -11,18 +11,20 @@ Map::Map(){
   int c;
   char a = ' ';
 
-  for(l = 0; l < LINHA; ++l)
-    for(c = 0; c < COLUNA; ++c){
+  for(l = 0; l < LINE; ++l)
+    for(c = 0; c < COLUMN; ++c){
        setMaze(a, l, c);
     }
 }
 
-void Map::setMaze(char a, int linha, int coluna){
-    maze[linha][coluna] = a;
+Map::~Map(){}
+
+void Map::setMaze(char a, int lin, int col){
+    maze[lin][col] = a;
 }
 
-char Map::getMaze(int linha, int coluna){
-  return maze[linha][coluna];
+char Map::getMaze(int lin, int col){
+  return maze[lin][col];
 }
 
 void Map::chargeMaze(){
@@ -30,9 +32,9 @@ void Map::chargeMaze(){
    ifstream map("maze.txt");
 
    if(map.is_open()){
-     for(int l = 0; l < LINHA; ++l){
+     for(int l = 0; l < LINE; ++l){
        getline(map, line);
-       for(int c = 0; c < COLUNA; ++c){
+       for(int c = 0; c < COLUMN; ++c){
          setMaze(line[c], l, c);
        }
      }
@@ -42,8 +44,8 @@ void Map::chargeMaze(){
 }
 
 void Map::makeMaze(){
-  for(int l = 0; l < LINHA; ++l){
-    for(int c = 0; c < COLUNA; ++c){
+  for(int l = 0; l < LINE; ++l){
+    for(int c = 0; c < COLUMN; ++c){
       move(l, c);
       printw("%c", getMaze(l, c));
     }
