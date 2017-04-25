@@ -1,43 +1,47 @@
 #include<iostream>
 #include "player.hpp"
+#include "map.hpp"
 using namespace std;
 
-Player::Player(){
-  setSprite(' ');
-  setPosx(0);
-  setPosy(0);
+Player::Player() {
+  setAlive(true);
+  setScore(0);
+  setWinner(false);
 }
 
 Player::Player(char sprite, int posx, int posy){
   setSprite(sprite);
   setPosx(posx);
   setPosy(posy);
+  setAlive(true);
+  setScore(0);
+  setWinner(false);
 }
 
 Player::~Player(){}
 
-void Player::setSprite(char sprite){
-  this->sprite = sprite;
+void Player::setAlive(bool alive){
+  this->alive = alive;
 }
 
-char Player::getSprite(){
-  return sprite;
+bool Player::getAlive(){
+  return alive;
 }
 
-void Player::setPosx(int posx){
-  this->posx = posx;
+void Player::setScore(int score){
+  this->score = score;
 }
 
-int Player::getPosx(){
-  return posx;
+int Player::getScore(){
+  return score;
 }
 
-void Player::setPosy(int posy){
-  this->posy = posy;
+void Player::setWinner(bool winner){
+  this->winner = winner;
 }
 
-int Player::getPosy(){
-  return posy;
+bool Player::getWinner(){
+  return winner;
 }
 
 void Player::movement(){}

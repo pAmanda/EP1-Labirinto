@@ -1,24 +1,25 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
+#include<iostream>
+#include "gameObject.hpp"
 
-class Player{
+class Player : public GameObject{
   private:
-    char sprite;
-    int posx;
-    int posy;
+    bool alive;
+    int score;
+    bool winner;
 
   public:
     Player();
-    Player(char sprite, int posx, int posy);
+    Player(char sprite, int posx, int posy) ;
     ~Player();
-    void setSprite(char sprite);
-    char getSprite();
-    void setPosx(int posx);
-    int getPosx();
-    void setPosy(int posy);
-    int getPosy();
+    void setAlive(bool alive);
+    bool getAlive();
+    void setScore(int score);
+    int getScore();
+    void setWinner(bool winner);
+    bool getWinner();
     void movement();
-
 };
 
 #endif
