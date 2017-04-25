@@ -13,7 +13,6 @@ int main(){
   while(TRUE){
     initscr();
     noecho();
-    getch();
     drawn->drawnMap();
   }
   refresh();
