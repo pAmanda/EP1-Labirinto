@@ -1,6 +1,7 @@
 #include<iostream>
 #include "player.hpp"
 #include "map.hpp"
+#include<ncurses.h>
 using namespace std;
 
 Player::Player() {
@@ -43,5 +44,3 @@ void Player::setWinner(bool winner){
 bool Player::getWinner(){
   return winner;
 }
-
-void Player::movement(){}

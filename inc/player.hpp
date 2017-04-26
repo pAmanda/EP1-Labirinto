@@ -1,9 +1,11 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
-#include<iostream>
-#include "gameObject.hpp"
+#include"gameObject.hpp"
+#include<ncurses.h>
+#include "map.hpp"
 
-class Player : public GameObject{
+class Player : public GameObject
+{
   private:
     bool alive;
     int score;
@@ -19,7 +21,6 @@ class Player : public GameObject{
     int getScore();
     void setWinner(bool winner);
     bool getWinner();
-    void movement();
 };
 
 #endif
