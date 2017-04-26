@@ -2,7 +2,6 @@
 #define GAMEOBJECT_HPP
 
 class GameObject{
-
   private:
     char sprite;
     int posx;

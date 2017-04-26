@@ -1,6 +1,6 @@
 #ifndef MAP_HPP
 #define MAP_HPP
-
+#include<ncurses.h>
 #define LINE 22
 #define COLUMN 50
 
@@ -16,5 +16,4 @@ class Map{
         void chargeMaze();
         void makeMaze();
 };
-
 #endif

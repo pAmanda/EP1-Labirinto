@@ -1,5 +1,4 @@
 #include<iostream>
-#include<ncurses.h>
 #include<fstream>
 #include "map.hpp"
 #define LINE 22
@@ -47,7 +46,7 @@ void Map::makeMaze(){
   for(int l = 0; l < LINE; ++l){
     for(int c = 0; c < COLUMN; ++c){
       move(l, c);
-      printw("%c", getMaze(l, c));
+      addch(getMaze(l, c));
     }
   }
 }
