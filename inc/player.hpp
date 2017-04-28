@@ -4,6 +4,7 @@
 #include<ncurses.h>
 #include "map.hpp"
 
+//Cria o protagonista do jogo
 class Player : public GameObject
 {
   private:
@@ -17,8 +18,6 @@ class Player : public GameObject
     ~Player();
     void setAlive(bool alive);
     bool getAlive();
-    void setScore(int score);
-    int getScore();
     void setWinner(bool winner);
     bool getWinner();
 };

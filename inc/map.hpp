@@ -4,6 +4,7 @@
 #define LINE 22
 #define COLUMN 50
 
+//Classe responsável por importar mapa
 class Map{
       private:
         char maze[LINE][COLUMN];

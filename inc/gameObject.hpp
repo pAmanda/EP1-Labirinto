@@ -1,6 +1,7 @@
 #ifndef GAMEOBJECT_HPP
 #define GAMEOBJECT_HPP
 
+//Classe base que possui características comum a outras classes.
 class GameObject{
   private:
     char sprite;

@@ -26,6 +26,7 @@ char Map::getMaze(int lin, int col){
   return maze[lin][col];
 }
 
+//Carrega o mapa de um arquivo,txt
 void Map::chargeMaze(){
    string line;
    ifstream map("maze.txt");
@@ -42,6 +43,7 @@ void Map::chargeMaze(){
 
 }
 
+//Constrói o mapa
 void Map::makeMaze(){
   for(int l = 0; l < LINE; ++l){
     for(int c = 0; c < COLUMN; ++c){

@@ -4,18 +4,16 @@
 #include<ncurses.h>
 using namespace std;
 
-Player::Player() {
+Player::Player() { //Polimorfismo do tipo Sobrecarga de Construtor
   setAlive(true);
-  setScore(0);
   setWinner(false);
 }
 
-Player::Player(char sprite, int posx, int posy){
+Player::Player(char sprite, int posx, int posy){//Polimorfismo do tipo Sobrecarga de Construtor
   setSprite(sprite);
   setPosx(posx);
   setPosy(posy);
   setAlive(true);
-  setScore(0);
   setWinner(false);
 }
 
@@ -27,14 +25,6 @@ void Player::setAlive(bool alive){
 
 bool Player::getAlive(){
   return alive;
-}
-
-void Player::setScore(int score){
-  this->score = score;
-}
-
-int Player::getScore(){
-  return score;
 }
 
 void Player::setWinner(bool winner){
