@@ -1,17 +1,12 @@
-BINFOLDER := bin/
-INCFOLDER := inc/
-SRCFOLDER := src/
-OBJFOLDER := obj/
-
 CC := g++
-CFLAGS := -Wall -std=c++11
+CFLAGS := -Wall
 
 SRCFILES := $(wildcard src/*.cpp)
 
 all: $(SRCFILES:src/%.cpp=obj/%.o)
-	$(CC) $(CFLAGS) obj/*.o -o bin/main -lncurses
+	$(CC) $(CFLAGS) obj/*.o -o bin/saida -lncurses
 
-obj/%.o: src/%.cpp
+obj/%.o : src/%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@ -I./inc -lncurses
 
 .PHONY: clean
@@ -20,4 +15,4 @@ clean:
 	rm -rf bin/*
 
 run:
-		bin/main
+	bin/saida
